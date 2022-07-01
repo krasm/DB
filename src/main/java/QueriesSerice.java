@@ -1,14 +1,14 @@
 public class QueriesSerice {
 
-    GoodQueries goodQueries;
-    BadQueries badQueries;
+    IQuery goodQueries;
+    IQuery badQueries;
 
-    public QueriesSerice(GoodQueries goodQueries, BadQueries badQueries) {
+    public QueriesSerice(IQuery goodQueries, IQuery badQueries) {
         this.goodQueries = goodQueries;
         this.badQueries = badQueries;
     }
 
-    public GoodQueries getGoodQueries() {
+    public IQuery getGoodQueries() {
         return goodQueries;
     }
 
@@ -16,7 +16,7 @@ public class QueriesSerice {
         this.goodQueries = goodQueries;
     }
 
-    public BadQueries getBadQueries() {
+    public IQuery getBadQueries() {
         return badQueries;
     }
 
