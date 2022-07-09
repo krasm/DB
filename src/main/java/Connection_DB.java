@@ -51,6 +51,8 @@ public class Connection_DB extends JFrame {
 
             button = new JButton("LogIn");
             button.setBounds(10,80,80,25);
+
+            ////
             button.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -60,6 +62,7 @@ public class Connection_DB extends JFrame {
                         service.addUsser(new Usser(userText.getText(), passwordField.getText()));
                         succes.setText("Login succesful");
                         panel.add(new JButton(userText.getText())).setBounds(10,i,80,25);
+                        // have to add listinere 4sure
                         i =+10;
                     } catch (SQLException ex) {
                         ex.printStackTrace();
@@ -67,6 +70,7 @@ public class Connection_DB extends JFrame {
                     }
                 }
             });
+            ////
 
             succes = new JLabel("");
             succes.setBounds(10,110,300,25);
