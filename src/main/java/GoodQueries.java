@@ -12,15 +12,16 @@ public class GoodQueries implements IQuery {
     
     @Override
     public ResultSet selectQ(String query, Usser usser) throws SQLException {
-        ResultSet rs = select.executeQuery();
+       return  select.executeQuery();
         // parse result set and return something meaningful :)
     }
 
     @Override
-    public void dmlQuerries(String query, Usser usser) throws SQLException {
+    public void dmlQuerries(String[] params, String kindOfQuery, Usser usser) throws SQLException {
 
-        usser.connection.con.prepareStatement(query).executeQuery();
     }
+
+
 
 
 }

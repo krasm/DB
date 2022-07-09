@@ -10,7 +10,9 @@ public class BadQueries implements IQuery{
     }
 
     @Override
-    public void dmlQuerries(String query, Usser usser) throws SQLException {
-        usser.statement.executeQuery(query);
+    public void dmlQuerries(String[] params, String kindOfQuery, Usser usser) throws SQLException {
+
     }
+
+
 }
