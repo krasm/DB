@@ -2,6 +2,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+//do nothing riht now
 public class GoodQueries implements IQuery {
     private final PreparedStatement select;
     
@@ -13,7 +14,7 @@ public class GoodQueries implements IQuery {
     @Override
     public ResultSet selectQ(String query, Usser usser) throws SQLException {
        return  select.executeQuery();
-        // parse result set and return something meaningful :)
+        // parse result set and return something meaningful
     }
 
     @Override

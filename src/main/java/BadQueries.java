@@ -1,6 +1,7 @@
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+//do nothing riht now
 public class BadQueries implements IQuery{
 
 
