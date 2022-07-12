@@ -7,13 +7,10 @@ public class BadQueries implements IQuery{
 
     @Override
     public ResultSet selectQ(String query, Usser usser) throws SQLException {
-        return usser.statement.executeQuery(query);
+        return usser.statement.executeQuery("select klient_imie from bd4_klient where klient_nazwisko = 'Abacki'");
     }
 
-    @Override
-    public void dmlQuerries(String[] params, String kindOfQuery, Usser usser) throws SQLException {
 
-    }
 
 
 }
