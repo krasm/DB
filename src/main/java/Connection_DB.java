@@ -3,8 +3,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
-import java.util.HashSet;
-import java.util.Set;
 
 public class Connection_DB extends JFrame {
 
@@ -19,6 +17,9 @@ public class Connection_DB extends JFrame {
     private static JFrame frame;
     private static JPanel panel;
     private static JLabel label3;
+    private static JButton [] buttony = new JButton[12];
+    private static int i =0;
+    private static int y = 150;
 
 
 
@@ -52,25 +53,34 @@ public class Connection_DB extends JFrame {
             button = new JButton("LogIn");
             button.setBounds(10,80,80,25);
 
-            ////
+
             button.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
 
                     try {
-                        int i = 145;
                         service.addUsser(new Usser(userText.getText(), passwordField.getText()));
                         succes.setText("Login succesful");
-                        panel.add(new JButton(userText.getText())).setBounds(10,i,80,25);
-                        // have to add listinere 4sure
-                        i =+10;
+                        buttony[i] = new JButton(userText.getText());
+                        buttony[i].setBounds(10,y,80,25);
+                        panel.add(buttony[i]);
+                        buttony[i].addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+
+                            }
+                        });
+
+                        y +=30;
+                        i++;
                     } catch (SQLException ex) {
                         ex.printStackTrace();
-                        succes.setText("Login unsucesfull");
+
                     }
                 }
             });
-            ////
+
+
 
             succes = new JLabel("");
             succes.setBounds(10,110,300,25);
